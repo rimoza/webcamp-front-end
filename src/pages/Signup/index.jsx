@@ -5,7 +5,10 @@ import styles from "./styles.module.css";
 
 const Signup = () => {
   const googleAuth = () => {
-    window.open(`${process.env.REACT_APP_API_URL}/auth`, "_self");
+    window.open(
+      `${process.env.REACT_APP_API_URL}/auth/google/callback`,
+      "_self"
+    );
   };
   return (
     <div className={styles.container}>
@@ -13,7 +16,7 @@ const Signup = () => {
         <span>Sign up with Google</span>
       </button>
       <p>
-        Already Have Accoutt ?{" "}
+        Already Have Accoutt ?
         <Link to="/login">
           <span className={styles.google_login}>Login</span>
         </Link>

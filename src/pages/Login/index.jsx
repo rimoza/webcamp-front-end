@@ -4,7 +4,10 @@ import styles from "./styles.module.css";
 
 const Login = () => {
   const googleAuth = () => {
-    window.open(`${process.env.REACT_APP_API_URL}/auth}`, "_self");
+    window.open(
+      `${process.env.REACT_APP_API_URL}/auth/google/callback}`,
+      "_self"
+    );
   };
   return (
     <div className={styles.container}>
